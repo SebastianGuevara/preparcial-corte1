@@ -1,4 +1,18 @@
 package entities;
 
-public class Cyclist {
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+
+public class Cyclist
+{
+    private String email;
+    private String name;
+    private Date birthDate;
+    private int level;
+    private double  height;
+    private double weight;
+
+    private List<Activity> results = new ArrayList<>();
+    private List<Plan> plans = new ArrayList<>();
 }

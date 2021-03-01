@@ -1,4 +1,11 @@
 package entities;
 
-public class ProgressLog {
+import java.util.Date;
+
+public class ProgressLog
+{
+    private long number;
+    private Date date;
+    private double fulfillment;
+
 }

@@ -8,7 +8,9 @@ public class MasterTraining {
     public static final int undefined = 1;
 
     private List<Plan> plans;
-
+    private List<Cyclist> cyclists = new ArrayList<>();
+    private List<Trainer> trainers = new ArrayList<>();
+    private List<Workout> workouts = new ArrayList<>();
     public MasterTraining() {
         this.plans = new ArrayList<>();
     }

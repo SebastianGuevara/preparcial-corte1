@@ -15,4 +15,10 @@ public class Cyclist
 
     private List<Activity> results = new ArrayList<>();
     private List<Plan> plans = new ArrayList<>();
+
+    public List<Plan> getPlans()
+    {
+        return this.plans;
+    }
+
 }

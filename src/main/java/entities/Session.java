@@ -17,5 +17,15 @@ public class Session {
     {
         return new Date();
     }
+    public int averageBeats()
+    {
+        int sab = 0;
+        if (activity!=null)
+        {
+            sab=activity.averageBeats();
+        }
+        return sab;
+    }
+
 
 }

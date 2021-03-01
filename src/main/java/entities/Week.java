@@ -25,4 +25,14 @@ public class Week {
         this.plan = plan;
     }
 
+    public int avarageBeats()
+    {
+        int wab = 0;
+        for (Session s : sessions)
+        {
+            wab=s.averageBeats();
+        }
+        return wab;
+    }
+
 }

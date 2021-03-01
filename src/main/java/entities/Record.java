@@ -12,4 +12,8 @@ public class Record {
     public Record(int beats) {
         this.beats = beats;
     }
+
+    public int getBeats() {
+        return beats;
+    }
 }

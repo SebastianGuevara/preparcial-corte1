@@ -12,7 +12,7 @@ public class Plan {
 
     private long number;
     private Date date;
-    private char type;
+    private String type;
     private int level;
     private boolean active;
     private Date start;
@@ -27,6 +27,11 @@ public class Plan {
         this.number = number;
         this.weeks = new ArrayList<>();
     }
+    public Plan(String type)
+    {
+        this.type=type;
+        //this.cyclist=c;
+    }
 
     public void addWeek(Week week) {
         this.weeks.add(week);
@@ -36,7 +41,17 @@ public class Plan {
         return number;
     }
 
-    public char getType() {
+    public String getType() {
         return type;
     }
+
+    public int avarageBeats()
+    {
+        int pab = 0;
+        for (Week week : weeks) {
+            pab = week.avarageBeats();
+        }
+        return pab;
+    }
+
 }

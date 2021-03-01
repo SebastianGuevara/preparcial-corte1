@@ -42,6 +42,7 @@ public class MasterTrainingTest {
         assertNotNull(newPlan1, "The new plan was created.");
         assertNotNull(newPlan2, "The new plan was created.");
 
+
         assertEquals(masterTraining.countPlans(), 5, "The count of plans with the new ones");
     }
 

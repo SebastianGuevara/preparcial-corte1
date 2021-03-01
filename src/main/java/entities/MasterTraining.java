@@ -11,9 +11,11 @@ public class MasterTraining {
     private List<Cyclist> cyclists = new ArrayList<>();
     private List<Trainer> trainers = new ArrayList<>();
     private List<Workout> workouts = new ArrayList<>();
+
     public MasterTraining() {
         this.plans = new ArrayList<>();
     }
+
 
     /**
      * Determina para un plan específico el rendimiento del corazón del ciclista.
@@ -22,7 +24,31 @@ public class MasterTraining {
      * @param number El numero del plan a verificar
      * @return Plan: El nuevo plan creado en caso de necesitarlo, de lo contrario null.
      */
-    public Plan checkHeart(long number) {
+    public Plan checkHeart(long number)
+    {
+        int pab;
+
+        pab=this.findPlan(number).avarageBeats();
+        if (pab < 90 || pab > 160)
+        {
+            plans.add(new Plan(2));
+            return findPlan(number);
+        }
+        else
+        {
+            return null;
+        }
+
+    }
+
+    public Plan findPlan(long number)
+    {
+        for (Plan plan : plans) {
+            if (plan.getNumber() == number) {
+                return plan;
+            }
+        }
+
         return null;
     }
 

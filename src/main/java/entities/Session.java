@@ -17,12 +17,12 @@ public class Session {
     {
         return new Date();
     }
-    public int averageBeats()
+    public double averageBeats()
     {
-        int sab = 0;
+        double sab = 0;
         if (activity!=null)
         {
-            sab=activity.averageBeats();
+            sab+=activity.averageBeats();
         }
         return sab;
     }

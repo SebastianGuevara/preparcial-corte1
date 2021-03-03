@@ -27,10 +27,10 @@ public class Plan {
         this.number = number;
         this.weeks = new ArrayList<>();
     }
-    public Plan(String type)
+    public Plan(String type,Cyclist c)
     {
         this.type=type;
-        //this.cyclist=c;
+        this.cyclist=c;
     }
 
     public void addWeek(Week week) {
@@ -41,17 +41,30 @@ public class Plan {
         return number;
     }
 
-    public String getType() {
-        return type;
-    }
-
-    public int avarageBeats()
+    public double avarageBeats()
     {
-        int pab = 0;
+        double wab = 0;
         for (Week week : weeks) {
-            pab = week.avarageBeats();
+            wab += week.avarageBeats();
         }
-        return pab;
+        return this.weeks.size() == 0 ? 0 : wab/ this.weeks.size();
+    }
+    public Cyclist findCyclist(String name)
+    {
+        if (cyclist.getName().equals(name))
+            return this.cyclist;
+        else
+            return null;
+    }
+    public void setWeeks(int now)
+    {
+        for (int i=0;i<now;i++)
+        {
+            this.weeks.add(new Week());
+        }
     }
 
+    public Cyclist getCyclist() {
+        return cyclist;
+    }
 }

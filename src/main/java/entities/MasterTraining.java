@@ -26,30 +26,28 @@ public class MasterTraining {
      */
     public Plan checkHeart(long number)
     {
-        int pab;
-
-        pab=this.findPlan(number).avarageBeats();
+        double pab;
+        Plan p1 = null, p2 = null;
+        p1 = this.findPlan(number);
+        pab=p1.avarageBeats();
         if (pab < 90 || pab > 160)
         {
-            plans.add(new Plan(2));
-            return findPlan(number);
+            p2 = new Plan("Heart Care", p1.getCyclist());
+            plans.add(p1);
         }
-        else
-        {
-            return null;
-        }
+        return p2;
 
     }
-
     public Plan findPlan(long number)
     {
+        Plan result = null;
         for (Plan plan : plans) {
             if (plan.getNumber() == number) {
-                return plan;
+                result = plan;
             }
         }
 
-        return null;
+        return result;
     }
 
     public void addPlan(Plan plan) {

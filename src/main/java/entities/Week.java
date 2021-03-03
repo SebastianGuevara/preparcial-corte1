@@ -25,14 +25,18 @@ public class Week {
         this.plan = plan;
     }
 
-    public int avarageBeats()
+    public double avarageBeats()
     {
-        int wab = 0;
+        double sab = 0;
         for (Session s : sessions)
         {
-            wab=s.averageBeats();
+            double sessionAvarageBeats = s.averageBeats();
+            if (sessionAvarageBeats != 0)
+            {
+                sab+=s.averageBeats();
+            }
         }
-        return wab;
+        return this.sessions.size()== 0 ? 0: sab /this.sessions.size();
     }
 
 }

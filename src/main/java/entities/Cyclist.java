@@ -20,5 +20,9 @@ public class Cyclist
     {
         return this.plans;
     }
+    public String getName()
+    {
+        return this.name;
+    }
 
 }

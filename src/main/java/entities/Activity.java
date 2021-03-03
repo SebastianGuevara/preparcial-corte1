@@ -22,14 +22,15 @@ public class Activity {
     public void addRecord(Record record) {
         this.records.add(record);
     }
-    public int averageBeats()
+    public double averageBeats()
     {
         int aab=0;
         for (Record r : records)
         {
-            aab=r.getBeats();
+            aab+=r.getBeats();
+
         }
 
-        return aab;
+        return this.records.size() == 0 ? 0 : aab/this.records.size();
     }
 }

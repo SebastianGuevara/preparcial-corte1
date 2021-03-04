@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Test;
 import java.util.Random;
 
 import static org.junit.jupiter.api.Assertions.*;
-//Esto solo lo escribo para probar si se puede subir los archivos a github desde intellij
+
 public class MasterTrainingTest {
 
     public static final int MAX_WEEKS = 53;
